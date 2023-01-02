@@ -1,0 +1,93 @@
+@charset "UTF-8";
+.header{
+    /* vh : viewport의 퍼센트 단위 */
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 10vw;
+    height: 100%;
+    align-content: flex-end;
+}
+
+.user{
+    width: 15vw;
+    height: 10vh;
+}
+
+.section{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    
+}
+
+.section-head{
+    height: 35vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    object-fit: none;
+    
+}
+
+.section-board{
+    width: 65%;
+    height: 25vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    
+}
+.section-logo{
+    height: fit-content;
+    order: 1;
+    margin: auto;
+}
+.search{
+    width: 100%;
+    height: 6vh;
+    top: 45%;
+    order: 2;
+    margin: auto;
+}
+
+.section-navigation{
+    width: 100%;
+    height: 10vh;
+    top: 40%;
+    align-items: space-around;
+}
+
+.section-recent{
+    width: 65%;
+    display: flex;  
+    right: 35%;
+    flex-direction: column;
+    align-content: center;
+}
+
+.books{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.aside{
+    width: 5vw;
+    height: 40vh;
+    top: 50%;
+    position: fixed;
+    left: 2%;
+    transform: translateY(-50%);
+}
+
+
+.footer{
+    background-color: lightcyan;
+    height: 15vh;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .con{
+            display: flex;
+            height: 200px;
+            border-style: solid;
+        }
+        
+        .item{
+            width: 50%;
+            height: 50px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h1>1. item : order </h1>
+    <div class="con">
+        <div class="item" style="background-color: lemonchiffon; order: 5;">5</div>
+        <div class="item" style="background-color: lightblue; order: 4">4</div>
+        <div class="item" style="background-color: lightcoral; order: 3">3</div>
+        <div class="item" style="background-color: lightgreen; order: 2">2</div>
+        <div class="item" style="background-color: lightseagreen; order: 1">1</div>
+    </div>
+    
+    <h1>2. item : flex-grow </h1>
+    <pre>
+        flex-grow : container의 크기 증가에 따른 item의 크기 증감 비율을 지정하는 속성
+        * flex-grow : 0 => container의 크기 증감해도 item의 크기가 변하지 않는다.
+        * flex-grow: 1 이상 => container를 가득 채우도록 item의 크기가 결정
+    </pre>
+    <div class="con">
+        <div class="item" style="background-color: lemonchiffon; flex-grow: 0;">0</div>
+        <div class="item" style="background-color: lightblue; flex-grow: 0;">0</div>
+        <div class="item" style="background-color: lightcoral; flex-grow: 1;">1</div>
+        <div class="item" style="background-color: lightgreen; flex-grow: 0;">0</div>
+        <div class="item" style="background-color: lightseagreen; flex-grow: 0;">0</div>
+    </div>
+    
+    <div class="con">
+        <div class="item" style="background-color: lemonchiffon; flex-grow: 1;">1</div>
+        <div class="item" style="background-color: lightblue; flex-grow: 1;">1</div>
+        <div class="item" style="background-color: lightcoral; flex-grow: 3;">3</div>
+        <div class="item" style="background-color: lightgreen; flex-grow: 1;">1</div>
+        <div class="item" style="background-color: lightseagreen; flex-grow: 1;">1</div>
+    </div>
+    
+    <h1>2. item : flex-shrink </h1>
+    <pre>
+        flex-shrink : container의 크기 감소에 따른 item의 크기 증감 비율을 지정하는 속성
+        * flex-grow : 0 => container의 크기 감소해도 item의 크기가 변하지 않는다.
+        * flex-grow: 1 이상 => container의 크기가 item의 크기가 작아질 때 item의 크기가 container에 맞춰 함께 감소
+    </pre>
+    <div class="con">
+        <div class="item" style="background-color: lemonchiffon; flex-shrink: 0;">0</div>
+        <div class="item" style="background-color: lightblue; flex-shrink: 0;">0</div>
+        <div class="item" style="background-color: lightcoral; flex-shrink: 1;">1</div>
+        <div class="item" style="background-color: lightgreen; flex-shrink: 0;">0</div>
+        <div class="item" style="background-color: lightseagreen; flex-shrink: 0;">0</div>
+    </div>
+    
+    <div class="con">
+        <div class="item" style="background-color: lemonchiffon; flex-shrink: 1;">1</div>
+        <div class="item" style="background-color: lightblue; flex-shrink: 1;">1</div>
+        <div class="item" style="background-color: lightcoral; flex-shrink: 3;">3</div>
+        <div class="item" style="background-color: lightgreen; flex-shrink: 1;">1</div>
+        <div class="item" style="background-color: lightseagreen; flex-shrink: 1;">1</div>
+    </div>
+    
+    <h1>4. item:flex-basis</h1>
+    <pre>
+        * flex-basis : item의 기본 크기를 결정하는 속성, default : auto
+        * flex-basis를 사용해 item의 크기를 지정할 때는 모든 단위를 사용할 수 있다.
+        * flex-basis의 속성값을 0으로 지정하면 해당 item은 (absolute flex item)이 되어서
+          content의 크기를 기준으로 item의 크기를 결정한다.
+    <div class="con">
+        <div class="item" style="background-color: lemonchiffon; flex-basis: 0;">컨텐츠의 크기</div>
+        <div class="item" style="background-color: lightblue; flex-basis: auto;">auto</div>
+        <div class="item" style="background-color: lightcoral; flex-basis: 400px;">400px</div>
+    </div>
+    </pre>
+</body>
+</html>
