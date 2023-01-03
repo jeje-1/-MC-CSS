@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookmanager</title>
+    <link rel="stylesheet" href="./resources/icon/css/fontawesome.css">
+    <link rel="stylesheet" href="./resources/icon/css/brands.css">
+    <link rel="stylesheet" href="./resources/icon/css/solid.css">
+    
+    <link rel="stylesheet" href="./resources/css/reset.css">
+    <link rel="stylesheet" href="./resources/css/common.css">
+    <link rel="stylesheet" href="./resources/css/lec_bookmanager.css">
+    <link rel="stylesheet" href="./resources/css/mob_bm.css">
+    
+    <!-- 
+        BEM 명명규칙
+        Block       : 기능적으로 독립적인 페이지 구성 요소
+                    ex) header, user, search
+        Element     : block을 구성하는 요소
+                    ex) input, btn, img, item
+        Modifier    : block의 상태
+                    ex) blue, bold, checked, selected
+        * Block과 Element는 다른 Block이나 Element를 포함할 수 있다. 
+        * Block과 Element는 __ 로 연결, Element와 Modifier는 -- 로 연결
+            *main__inp--focus
+            
+        * 반드시 모든 요소를 BEM으로 작성할 필요는 없다.
+     -->
+     <!-- 
+        미디어쿼리 : 단말기의 종류나 화면의 수치에 따라 다른 스타일을 요소에 적용할 수 있게끔 해주는 구문
+        작성법 :
+            @media : [not/only][매체유형 and](표현식){css 코드}
+            
+            매체유형 : all, print(인쇄), screeen(웹 또는 모바일), speech(스크린리더)
+            미디어쿼리 속성 : width, height, aspect-ratio(화면비율), device-width, device-height, device-aspect-ratio
+            
+            표현식 : 표현식의 결과가 true이면 medai query의 style이 적용되고, false라면 media qurery style을 무시
+            미디어쿼리4 이전 : min/max
+                            min/width:500px
+                            min-aspect-ratio : 5/4 => 가로 세로 비율을 5:4로 지정
+      -->
+</head>
+<body>
+    <header class="header">
+        <div class="logo row">
+            <span class="font-tit">MC</span>
+        </div>
+        <div class="user row">
+            <a>sign up</a>
+            <a>sign in</a>
+            <i class="fa-solid fa-bars mob-menu font-tit--b"></i>
+        </div>
+    </header>
+    <section class="section">
+        <nav class="aside snb col">
+            <div class="snb__tit row">
+                <span class="font-xl--b">MENU</span>
+            </div>
+            <div class="snb__items col">
+                <div class="snb__item col">
+                    <i class="fa-solid fa-magnifying-glass font-xl"></i>
+                    <span>search</span>
+                </div>
+                <div class="snb__item col">
+                    <i class="fa-solid fa-cart-shopping font-xl"></i>
+                    <span>cart</span>
+                </div>
+                <div class="snb__item col">
+                    <i class="fa-solid fa-clipboard font-xl"></i>
+                    <span>notice</span>  
+                </div>
+                <div class="snb__item col">
+                    <i class="fa-solid fa-users font-xl"></i>
+                    <span>about us</span>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="wrap-main col">
+            <div class="main col">
+                <div class="main__tit row">
+                    <span>MC 도서관</span>
+                </div>
+                <div class="main__form row">
+                    <label class="main__form__label font-tit row">search</label>
+                    <input class="main__form__inp" type="text" placeholder="검색어를 입력하세요"> 
+                    <button class="main__form__btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass font-lg--b"></i>
+                </button>
+                </div>
+            </div>
+        
+            <div class="gnb row">
+                <div class="gnb__item col">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="font-tit">search</span>
+                </div>
+                <div class="gnb__item col">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="font-tit">cart</span>
+                </div>
+                <div class="gnb__item col">
+                    <i class="fa-solid fa-clipboard"></i>
+                    <span class="font-tit">notice</span>  
+                </div>
+                <div class="gnb__item col">
+                    <i class="fa-solid fa-users"></i>
+                 <span class="font-tit">about us</span>
+                </div>
+            </div>
+        </div>
+        <div class="book-cate col">
+            <div class="wrap-books col">
+                <div class="book-cate__tit row">
+                    <span class="font-xxl--b">인기 도서</span>
+                </div>
+                <div class="books row">
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-books col">
+                <div class="book-cate__tit row">
+                    <span class="font-xxl--b">스테디셀러</span>
+                </div>
+                <div class="books row">
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-books col">
+                <div class="book-cate__tit row">
+                    <span class="font-xxl--b">신간도서</span>
+                </div>
+                <div class="books row">
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-books col">
+                <div class="book-cate__tit row">
+                    <span class="font-xxl--b">최근 대출 도서</span>
+                </div>
+                <div class="books row">
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                    <div class="book col">
+                        <img class="book__img" src="./resources/image/KakaoTalk_Photo_2023-01-02-16-11-12.jpeg" alt="">
+                        <span class="font-xl--b">NUDGE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer"></footer>
+</body>
+</html>
